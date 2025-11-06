@@ -1,3 +1,5 @@
-// Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
+// Empty placeholder to satisfy Sprockets
 import "@hotwired/turbo-rails"
 import "controllers"
+
+
