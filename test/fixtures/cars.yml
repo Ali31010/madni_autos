@@ -9,6 +9,7 @@ one:
   price: 9.99
   description: MyText
   status: MyString
+  user: one
 
 two:
   name: MyString
@@ -19,3 +20,4 @@ two:
   price: 9.99
   description: MyText
   status: MyString
+  user: one
