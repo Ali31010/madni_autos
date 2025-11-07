@@ -49,6 +49,7 @@ jobs:
         with:
           ruby-version: .ruby-version
           bundler-cache: true
+          cache-version: 2
 
       - name: Lint code for consistent style
         run: bin/rubocop -f github

@@ -13,11 +13,36 @@
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
+    
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
   </head>
 
-  <body>
+  <body class="bg-gray-100 font-sans">
+    <header class="bg-cyan-500 text-white shadow p-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold hover:text-black"><a href="/">Madni Autos</a></h1>
+      <nav class="space-x-4">
+        <%= link_to "Home", root_path, class: "hover:text-black" %>
+        <%= link_to "About", about_path, class: "hover:text-black" %>
+        <%= link_to "Contact", contact_path, class: "hover:text-black" %>
+        <%= link_to "FAQ", faq_path, class: "hover:text-black" %>
+
+        <% if user_signed_in? %>
+          <%= link_to "", root_path, class: "hover:text-blue-500" %>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete,  class: "hover:text-red-500" %>
+        <% else %>
+          <%= link_to "Login", new_user_session_path, class: "hover:text-black" %>
+          <%= link_to "Sign Up", new_user_registration_path, class: "hover:text-black" %>
+        <% end %>
+      </nav>
+    </header>
+
     <%= yield %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
   </body>
 </html>
+
+
+          
+       
