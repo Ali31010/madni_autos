@@ -9,7 +9,7 @@ one:
   price: 9.99
   description: MyText
   status: MyString
-  user: one
+  user: admin
 
 two:
   name: MyString
@@ -20,4 +20,4 @@ two:
   price: 9.99
   description: MyText
   status: MyString
-  user: one
+  user: admin
