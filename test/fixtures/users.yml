@@ -5,7 +5,7 @@
 # below each fixture, per the syntax in the comments below
 #
 # No user fixtures required
-one:
+admin:
   email: "admin@example.com"
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
   role: "admin"
